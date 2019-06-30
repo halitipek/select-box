@@ -1,0 +1,98 @@
+.select {
+  $font-color: #818d98;
+  $border-style: 2px solid #cfd4d8;
+  $border-radius: 3px;
+
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+
+  .hidden {
+    display: none;
+  }
+
+  &__label {
+    color: #2a2a2a;
+  }
+
+  &__box {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    border: $border-style;
+    border-radius: $border-radius;
+    background-color: transparent;
+    padding: 6px 9px;
+    text-align: left;
+    outline: 0;
+    color: $font-color;
+    font-size: 14px;
+    line-height: 1.6em;
+    cursor: pointer;
+
+    span {
+      flex-grow: 1;
+      color: $font-color;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 0 12px;
+    }
+
+    &::before {
+      content: "\2B24";
+      color: inherit;
+    }
+
+    &::after {
+      content: "\25BC";
+      color: $font-color;
+    }
+
+    &:focus {
+      border-color: rgba(77, 144, 254, .6)
+    }
+  }
+
+  &__list {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    border: $border-style;
+    border-radius: $border-radius;
+    max-height: 200px;
+    overflow: auto;
+
+    li {
+      display: flex;
+      padding: 6px 9px;
+      color: $font-color;
+      line-height: 1.6em;
+      outline: 0;
+
+      span {
+        flex-grow: 1;
+        margin-left: 12px;
+        color: $font-color;
+      }
+
+      &::before {
+        content: "\2B24";
+        color: inherit;
+      }
+
+      &:focus {
+        background-color: #f3f3f3;
+      }
+    }
+  }
+}
